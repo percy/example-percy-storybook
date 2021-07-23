@@ -6,13 +6,7 @@ export default {
   component: TodoFooter
 };
 
-const Template = args => {
-  return (
-    <TodoFooter
-      {...args}
-    />
-  );
-};
+const Template = args => <TodoFooter {...args}/>;
 
 Template.args = {
   activeCount: 0,
