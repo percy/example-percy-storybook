@@ -29,11 +29,11 @@ export default function TodoItem({
   };
 
   let handleEdit = () => {
-		onEdit();
+    onEdit();
     setEditText(title);
-	};
+  };
 
-	let handleKeyDown = event => {
+  let handleKeyDown = event => {
     if (event.which === ESCAPE_KEY) {
       setEditText(title);
       onCancel(event);
@@ -43,16 +43,16 @@ export default function TodoItem({
   };
 
   let handleChange = event => {
-		if (editing) {
+    if (editing) {
       setEditText(event.target.value);
-		}
-	};
+    }
+  };
 
   useEffect(() => {
     if (editing) {
       let len = editField.current.value.length;
       editField.current.focus();
-		  editField.current.setSelectionRange(len, len);
+      editField.current.setSelectionRange(len, len);
     }
   }, [editing]);
 
