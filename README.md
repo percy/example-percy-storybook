@@ -7,9 +7,9 @@ Storybook for React.
 
 ## Storybook Tutorial
 
-The tutorial assumes you're already familiar with JavaScript and
-[Storybook](https://storybook.js.org) and focuses on using it with Percy. You'll still spend time
-be able to follow along if you're not familiar with Storybook, but we won't introducing Storybook concepts.
+The tutorial assumes you're already familiar with JavaScript and [Storybook](https://storybook.js.org)
+and focuses on using it with Percy. You'll still be able to follow along if you're not familiar with 
+Storybook, but we won't spend time introducing Storybook concepts.
 
 The tutorial also assumes you have [Node 12+ with npm](https://nodejs.org/en/download/) and
 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
