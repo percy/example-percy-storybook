@@ -27,7 +27,6 @@ export default function TodoApp({
   todos: initTodos = [],
   showTodos: initShowTodos = 'all'
 }) {
-  console.log('showTodos', showTodos);
   let [newTodo, setNewTodo] = useState('');
   let [editing, setEditing] = useState(null);
   let [showTodos, setShowTodos] = useState(initShowTodos);
