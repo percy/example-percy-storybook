@@ -77,7 +77,7 @@ Use your text editor to edit `js/TodoFooter.js` and introduce some visual change
 add inline CSS to bold the "Clear completed" button on line 36. After the change, that template looks
 like this:
 
-``` html
+``` jsx
 <button
   style={{ fontWeight: 'bold' }}
   className="clear-completed"
