@@ -6,10 +6,10 @@
   "scripts": {
     "start": "start-storybook",
     "build": "build-storybook",
-    "test": "percy storybook:start"
+    "test": "percy storybook:start --debug"
   },
   "dependencies": {
-    "@percy/cli": "^1.0.5",
+    "@percy/cli": "^1.24.0",
     "@percy/storybook": "^4.2.0",
     "@storybook/react": "^6.3.5",
     "classnames": "^2.3.1",

@@ -50,6 +50,7 @@ export default function TodoApp({
 
   return (
     <div>
+      <img data-src="https://www.w3schools.com/html/programming.gif" />
       <header className="header">
         <h1>todos</h1>
         <input

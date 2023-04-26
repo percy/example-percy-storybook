@@ -25,6 +25,7 @@ App.args = {
 App.parameters = {
   // take additional snapshots of various states
   percy: {
+    domTransformation: '(documentElement) => { documentElement.querySelectorAll("img").forEach(img => img.setAttribute("src", img.getAttribute("data-src"))); return documentElement; }',
     additionalSnapshots: [{
       suffix: ' - Active',
       args: { showTodos: 'active' }
