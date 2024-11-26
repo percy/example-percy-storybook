@@ -11,3 +11,4 @@ export const decorators = [
 export const parameters = {
   layout: 'none'
 };
+export const tags = ['autodocs'];
