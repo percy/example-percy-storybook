@@ -61,7 +61,6 @@ export default function TodoItem({
       <div className="view">
         <input
           type="checkbox"
-          className="toggle"
           checked={completed}
           onChange={onToggle}
         />
