@@ -9,7 +9,7 @@
     "test": "percy storybook:start"
   },
   "dependencies": {
-    "@percy/cli": "^1.30.2",
+    "@percy/cli": "^1.30.10",
     "@percy/storybook": "^6.0.2",
     "@storybook/react": "^8.4.5",
     "classnames": "^2.3.1",
