@@ -6,12 +6,14 @@
   "scripts": {
     "start": "storybook dev",
     "build": "storybook build",
-    "test": "percy storybook:start"
+    "test": "percy storybook:start",
+    "live-url": "percy storybook"
   },
   "dependencies": {
-    "@percy/cli": "^1.30.11",
-    "@percy/storybook": "^6.0.4",
-    "@storybook/react": "^8.4.5",
+    "@percy/cli": "^1.31.0",
+    "@percy/storybook": "^7.0.0",
+    "@storybook/react": "^9.0.6",
+    "@storybook/react-webpack5": "^9.0.6",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,7 +21,6 @@
   },
   "devDependencies": {
     "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
-    "@storybook/react-webpack5": "^8.4.5",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9"
   }
