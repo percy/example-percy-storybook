@@ -6,8 +6,7 @@
   "scripts": {
     "start": "storybook dev",
     "build": "storybook build",
-    "test": "percy storybook:start",
-    "live-url": "percy storybook"
+    "test": "percy storybook:start"
   },
   "dependencies": {
     "@percy/cli": "^1.31.0",
