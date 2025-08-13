@@ -21,9 +21,11 @@ Clone the example application and install dependencies:
 ```bash
 $ git clone git@github.com:percy/example-percy-storybook.git
 $ cd example-percy-storybook
+$ nvm use 20
 $ npm install
 ```
 
+Note - Current storybook version requires node > 20
 The example app and its tests will now be ready to go. You can explore the app
 by running `npm start`.
 
