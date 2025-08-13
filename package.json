@@ -10,7 +10,7 @@
     "live-url": "percy storybook"
   },
   "dependencies": {
-    "@percy/cli": "^1.31.0",
+    "@percy/cli": "^1.31.1",
     "@percy/storybook": "^9.0.0",
     "@storybook/react": "^9.0.6",
     "@storybook/react-webpack5": "^9.0.6",
