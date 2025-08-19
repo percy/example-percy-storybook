@@ -21,7 +21,7 @@ Clone the example application and install dependencies:
 ```bash
 $ git clone git@github.com:percy/example-percy-storybook.git
 $ cd example-percy-storybook
-$ nvm use 20
+$ nvm use 
 $ npm install
 ```
 
