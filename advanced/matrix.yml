@@ -1,0 +1,92 @@
+# PER-8195 Phase 1 — Storybook matrix-row mapping (STUB).
+# Storybook SDK is a CLI addon (`percy storybook`), NOT a per-snapshot function.
+# Story-level coverage is configured via parameters.percy in .stories.js files.
+# Test code in advanced/stories/*.stories.js — TO BE WRITTEN.
+
+sdk: storybook
+package: '@percy/storybook'
+language: javascript
+entry_point: cli  # `percy storybook <url|directory>` — no in-test API
+sdk_min_version: '10.0.0'
+cli_min_version: '1.31.1'
+
+rows:
+  # Story-level percy parameters (the primary Storybook surface).
+  - id: storybook_parameters_percy
+    state: planned
+    test: 'every advanced/ story sets parameters.percy with at least one knob'
+  - id: storybook_additional_snapshots
+    state: planned
+    test: 'advanced/stories/Variants.stories.js — uses parameters.percy.additionalSnapshots with args + suffix'
+  - id: storybook_args_override
+    state: planned
+    test: 'advanced/stories/ArgsOverride.stories.js — parameters.percy.args overrides story args at snapshot time'
+  - id: storybook_globals_override
+    state: planned
+    test: 'advanced/stories/GlobalsOverride.stories.js — parameters.percy.globals'
+  - id: storybook_query_params
+    state: planned
+    test: 'advanced/stories/QueryParams.stories.js — parameters.percy.queryParams'
+  - id: storybook_skip
+    state: planned
+    test: 'advanced/stories/Skip.stories.js — parameters.percy.skip=true'
+  - id: storybook_name_override
+    state: planned
+    test: 'advanced/stories/NameOverride.stories.js — parameters.percy.name'
+
+  # CLI-level filters.
+  - id: storybook_include_pattern
+    state: planned
+    test: 'CI: advanced job runs `percy storybook --include "Advanced.*"`'
+  - id: storybook_exclude_pattern
+    state: planned
+    test: 'CI: advanced job runs with --exclude'
+
+  # Generic Percy options that apply at story-level or globally.
+  - id: widths
+    state: planned
+    test: 'parameters.percy.widths override on at least one story'
+  - id: percy_css
+    state: planned
+    test: 'parameters.percy.percyCSS on at least one story'
+  - id: min_height
+    state: planned
+    test: 'parameters.percy.minHeight on at least one story'
+  - id: enable_javascript
+    state: planned
+    test: 'parameters.percy.enableJavaScript on at least one story'
+  - id: responsive_snapshot_capture
+    state: planned
+    test: 'parameters.percy.responsiveSnapshotCapture'
+
+  # Generic options that DON'T apply to Storybook — stories isolated in iframes.
+  - id: scope
+    state: n_a
+    reason: 'Stories isolated in Storybook iframes; frame-scoped snapshots not supported.'
+  - id: regions
+    state: n_a
+    reason: 'Regions not supported for Storybook iframe-isolated stories.'
+  - id: dom_transformation
+    state: n_a
+    reason: 'Not exposed per-story; runs against the iframe document directly.'
+  - id: discovery
+    state: n_a
+    reason: 'Storybook scrapes stories at build/serve time; asset discovery is CLI-managed.'
+  - id: device_pixel_ratio
+    state: planned
+    test: 'global via .percy.yml snapshot.devicePixelRatio (verify SDK honors it)'
+  - id: browsers
+    state: planned
+    test: 'global via .percy.yml or CLI --browsers'
+
+  - id: env_percy_server_address
+    state: planned
+    test: 'CI: advanced job sets PERCY_SERVER_ADDRESS via env'
+  - id: percy_yml_global_config
+    state: planned
+    test: 'global config consumed via .percy.yml (storybook.* and snapshot.*)'
+  - id: environment_info_reporting
+    state: covered
+    test: 'automatic via @percy/storybook client info'
+
+# Pre-existing basic-example coverage (TodoApp.stories.js): parameters.percy.additionalSnapshots with args + suffix (3 variants). Other Storybook surfaces unexercised.
