@@ -2,8 +2,17 @@
 
 Example app showing integration of [Percy](https://percy.io/) visual testing into Storybook.
 
+> **New:** This repo ships an [`advanced/`](./advanced) example covering the full applicable Percy SDK feature surface for `@percy/storybook` (per-story `parameters.percy`, additionalSnapshots, args/queryParams/skip/name overrides, CLI include filter). See the [Percy SDK Feature Matrix](https://docs.percy.io/docs/sdk-feature-matrix) for cross-SDK coverage.
+
 Based on the [TodoMVC](https://github.com/tastejs/todomvc) app, written with the latest version of
 Storybook for React.
+
+## Examples
+
+| Example | What it shows | Run command |
+|---|---|---|
+| `./` (basic, at repo root) | Minimum viable integration: a `TodoApp.stories.js` with `parameters.percy.additionalSnapshots`. Start here. | `npm test` |
+| [`./advanced/`](./advanced) | Full applicable Percy SDK feature surface for Storybook: per-story widths/percyCSS/minHeight/enableJavaScript/responsiveSnapshotCapture, additionalSnapshots, args/queryParams/skip/name overrides, CLI include filter. See [`advanced/README.md`](./advanced/README.md) for the matrix-row coverage table. | `cd advanced && npm install && npm run test:advanced` |
 
 ## Storybook Tutorial
 
