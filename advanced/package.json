@@ -1,0 +1,24 @@
+{
+  "name": "example-percy-storybook-advanced",
+  "private": true,
+  "description": "Advanced Percy + Storybook example. Exercises the full applicable SDK feature surface via per-story parameters.percy. See README.md for the matrix-row coverage.",
+  "scripts": {
+    "test:advanced": "percy storybook:start",
+    "test:advanced:ci": "PERCY_TOKEN=fake_token percy exec --testing -- percy storybook:start"
+  },
+  "dependencies": {
+    "@percy/cli": "^1.31.13",
+    "@percy/storybook": "^9.0.0",
+    "@storybook/react": "^9.0.6",
+    "@storybook/react-webpack5": "^9.0.6",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "todomvc-app-css": "^2.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9"
+  }
+}

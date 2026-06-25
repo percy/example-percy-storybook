@@ -1,0 +1,20 @@
+# PER-8195 — advanced example global config for @percy/storybook.
+# Storybook SDK is CLI-driven; these are the Percy CLI defaults applied
+# across every story snapshot. Per-story `parameters.percy` overrides win.
+
+version: 2
+
+snapshot:
+  widths: [375, 1280]
+  min-height: 1024
+  percy-css: |
+    .todo-list li { transition: none !important; }
+  device-pixel-ratio: 2
+
+discovery:
+  network-idle-timeout: 500
+
+storybook:
+  # CLI-level include/exclude filters. Comment lines mirror matrix-row
+  # storybook_include_pattern / storybook_exclude_pattern.
+  include: ['Advanced/.*']
