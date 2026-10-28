@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   stories: ['../js/*.stories.js'],
 
   features: {
@@ -16,5 +16,5 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript'
   },
 
-  addons: ['@storybook/addon-webpack5-compiler-babel']
+  addons: ['@storybook/addon-webpack5-compiler-babel', '@storybook/addon-a11y']
 };
