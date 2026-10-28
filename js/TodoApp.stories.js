@@ -4,6 +4,7 @@ import TodoApp from './TodoApp';
 export default {
   title: 'TodoApp',
   component: TodoApp,
+  tags: ['visual-smoke'],
 };
 
 export const App = args => <TodoApp {...args}/>;

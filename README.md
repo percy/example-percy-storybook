@@ -14,6 +14,22 @@ Storybook for React.
 | `./` (basic, at repo root) | Minimum viable integration: a `TodoApp.stories.js` with `parameters.percy.additionalSnapshots`. Start here. | `npm test` |
 | [`./advanced/`](./advanced) | Full applicable Percy SDK feature surface for Storybook: per-story widths/percyCSS/minHeight/enableJavaScript/responsiveSnapshotCapture, additionalSnapshots, args/queryParams/skip/name overrides, CLI include filter. See [`advanced/README.md`](./advanced/README.md) for the matrix-row coverage table. | `cd advanced && npm install && npm run test:advanced` |
 
+## Storybook features Percy picks up
+
+The root example runs Storybook 10.6. These need `@percy/storybook` 10.1.0 or later. Older
+versions ignore them (they log an "Invalid config" / "Invalid Storybook parameters" warning and
+snapshot as before), except `--include-tags`, which they reject as an unknown option.
+
+| Feature | Where | Result |
+|---|---|---|
+| Story viewport | `Percy Features` stories set `globals.viewport` to `mobile1` and a custom `kiosk` option (`.storybook/preview.js`) | Captured at 320px and 600px instead of the project widths |
+| Modes | `.percy.yml` `storybook.modes` with a `dark` theme global (theme decorator in `.storybook/preview.js`) | Each story also gets a `<story> [dark]` snapshot |
+| Vision simulation | `Percy Features: vision modes` sets `parameters.percy.modes` with the `@storybook/addon-a11y` `vision: 'deuteranopia'` global | Adds a `[deuteranopia]` snapshot; a story-level list replaces the `.percy.yml` one |
+| Tags | `tags: ['visual-smoke']` on `TodoApp` and `vision modes` | `npm run test:smoke` (`percy storybook:start --include-tags visual-smoke`, or `storybook.tags.include`) snapshots only those |
+
+The stories use CSF3, so there is no `.test()` story: Storybook test entries need CSF Next.
+Percy skips test entries by default (`storybook.captureTestEntries: true` captures them).
+
 ## Storybook Tutorial
 
 The tutorial assumes you're already familiar with JavaScript and [Storybook](https://storybook.js.org)
